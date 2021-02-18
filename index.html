@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <title>The Strive Team Generator</title>
+
+    <!--
+    WELCOME TO THE STRIVE TEAM GENERATOR!
+
+    The app is pretty straight forward, use Bootstrap to add the following features:
+    - The user can add a list of names
+    - The user can set the number of teams
+    - Every time the user clicks on the "assign" button, a random name is placed in a team and removed from the list
+    - Each team should be inside a "column"
+    - [EXTRA] Create a button to remove an user from a team, putting him back in the main list
+    - [EXTRA] Create a button to reset the state of the app
+-->
+
+  </head>
+  <body>
+    
+    <div class="jumbotron jumbotron-fluid  bg-img h-auto w-100">
+        <div class="container">
+          <h1 class="display-4">Welcome Strivers,</h1>
+          <p class="lead">This is the famous application that will divide you into teams.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col col-md-4">
+                <div class="col">
+                    
+                    <form>
+                        <label for="add"><h5>Add members</h5></label>
+                        <input type="text" id="add">
+                        <input type="button" class="btn btn-success btn-sm" id="button" value="Add" onclick= addMembers()>
+                    </form>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                      </ul>
+              
+                    
+                </div>
+            </div>
+
+            <div class="col col-md-8">
+                <div class="col-12">
+                    <form>
+                        <label for="size"><h5>Size of team:</h5></label>
+                        <input type="number" id="size" name="quantity" min="2" max="4" step="1" value="3">
+                      </form>
+                </div>
+
+                <div class="col-12">
+                    <form>
+                        <label for="btn"><h5>Make the team</h5></label>
+                        <input type="button" class="btn btn-warning btn-sm" id="btn" value="Mixt">
+                    </form>
+                </div>
+
+                <div class="col-12"><h5>The teams are:</h5></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        function addMembers(){
+            console.log("work")
+            let list = document.getElementsByClassName('list-group')
+            for (let i = 0; i < list.length; i++) {
+                console.log("ceva")
+                let member = document.getElementById('add')
+                
+                let li = document.createElement('li')
+                li.innerText = member
+                list.appendChild(li)   
+            }
+        }
+
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
