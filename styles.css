@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(62, 63, 65);
+    font-family: 'Poppins', sans-serif;
+}
+.bg-img {
+    background-image: url(./img/img-1.jpg);
+    
+}
+.jumbotron {
+    color: black;
+}
+.container {
+    color: white;
+   
+}
+input#add, input#size {
+    background-color: lightskyblue;
+    border-radius: 8px;
+}
+input#size {
+    width: 40px;
+}
+.list-group-item {
+    padding: .5rem 1rem ;
+}
